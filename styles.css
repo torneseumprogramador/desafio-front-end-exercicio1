@@ -161,6 +161,51 @@
 
 
 
+#estudo #estrutura-grid #logo{
+    grid-area: logo;
+}
+#estudo #estrutura-grid #menu{
+    grid-area: menu;
+}
+#estudo #estrutura-grid #banner{
+    grid-area: banner;
+    height: 100px;
+}
+#estudo #estrutura-grid #conteudo{
+    grid-area: conteudo;
+    height: 400px;
+}
+#estudo #estrutura-grid #publi{
+    grid-area: publi;
+}
+#estudo #estrutura-grid #footer{
+    grid-area: footer;
+}
+
+#estudo #estrutura-grid #header{
+    display: grid;
+    grid-template-areas: 
+        "logo menu menu menu menu login"
+        "banner banner banner banner banner banner"
+        "conteudo conteudo conteudo conteudo publi publi"
+        "footer footer footer footer footer footer";
+
+    /*justify-items: stretch; /* start, end, center, stretch  -- Colunas*/
+    /*align-items: center; /* start, end, center, stretch -- linhas */
+    
+   
+}
+#estudo #estrutura-grid #header div{
+    border: 1px solid #000;
+    /* width: 46%; */
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+
 
 
 
