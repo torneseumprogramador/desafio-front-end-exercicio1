@@ -52,7 +52,7 @@ header nav ul li a {
     text-decoration: none;
 }
 
-#carousel img {
+#carrossel img {
     width: 100%;
     height: auto;
 }
@@ -87,6 +87,44 @@ footer {
     padding: 10px;
 }
 
+#carrossel {
+    display: flex;
+    position: relative;
+}
+#carrossel div.carrossel-container {
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+#carrossel div ul {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+#carrossel div ul li {
+    width: 992px;
+    height: 150px;
+}
+#carrossel .carrossel-button{
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    height: 100%;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 3px #000;
+}
+#carrossel #carrossel-anterior{
+    left: 0px;
+}
+#carrossel #carrossel-proximo{
+    right: 0px;
+}
+    
+
 @media (min-width: 993px) {
     header nav button {
         display: none;
@@ -95,38 +133,19 @@ footer {
     header nav ul {
         display: flex;
     }
-
-    #carousel {
-        text-align: center;
-        display: flex;
+    
+    #carrossel div ul li {
+        height: 350px;
     }
-    #carousel div.carousel-container {
-        overflow: scroll;
-    }
-
-    #carousel div ul {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        list-style: none;
-        margin: 0px;
-        padding: 0px;
-        width: 100%;
-    }
-    #carousel div ul li {
-        width: 1500px;
-        height: 300px;
-        overflow: hidden;
-        background-image: url('banner.webp');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    #carousel div ul li:nth-child(2) {
-        background-image: url('item.webp');
-    }
-
-    #carousel div ul li:nth-child(3) {
-        background-image: url('banner.webp');
+    #carrossel .carrossel-button{
+        background-color: #fff;
+        border: 5px outset #ccc;
+        border-radius: 15px;
+        position: unset;
+        height: unset;
+        font-weight: bold;
+        font-size: 30px;
+        color: #fff;
+        text-shadow: 2px 2px 3px #000;
     }
 }
