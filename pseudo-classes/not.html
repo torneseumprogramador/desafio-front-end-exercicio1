@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Example</title>
+    <style>
+        .lista li:not(.nao_estilizar) {
+            background-color: rgb(255, 166, 0);
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul class="lista">
+        <li>I am included.</li>
+        <li class="nao_estilizar">I am excluded.</li>
+        <li >I am included too.</li>
+    </ul>
+</body>
+</html>

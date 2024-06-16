@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth-Child Example</title>
+    <style>
+        .nth-child-example li:nth-child(odd) {
+            background-color: lightgray;
+        }
+        .nth-child-example li:nth-child(even) {
+            background-color: darkgray;
+            color: white;
+        }
+
+        .nth-child-example2 li:nth-child(1) {
+            background-color: lightgray;
+        }
+        .nth-child-example2 li:nth-child(3), .nth-child-example2 li:nth-child(4) {
+            background-color: darkgray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nth-child-example">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+
+    <ul class="nth-child-example2">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+</body>
+</html>
