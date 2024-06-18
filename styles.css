@@ -94,6 +94,8 @@ header nav ul#menu li a {
 #carrossel img {
     width: 100%;
     height: auto;
+    /* object-fit: cover;
+    object-position: center; */
 }
 
 #gallery {
