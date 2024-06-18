@@ -8,6 +8,7 @@
 - aprofundando em js, utilizando ajax
 - criar um html com js utilizando move, drop down
 - performance (minidfy e o uglify)
+- Babel e Webpack
 - saas less
 - frameworks css (bootstrap, tailwind)
 - frameworks js (jquery, React, angular, vue.js, svelt)
