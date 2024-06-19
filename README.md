@@ -1,14 +1,12 @@
 ```css
 ==== Proximos passos ===
-- acessibilidade de HTML
-- html tags SEO metatgs
-
+- link ancora
 - html forms
 - js manipulando dom
 - aprofundando em js, utilizando ajax
 - criar um html com js utilizando move, drop down
 - performance (minidfy e o uglify)
-- Babel e Webpack
+- Babel, Webpack e TS
 - saas less
 - frameworks css (bootstrap, tailwind)
 - frameworks js (jquery, React, angular, vue.js, svelt)
