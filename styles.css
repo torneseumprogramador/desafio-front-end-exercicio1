@@ -90,6 +90,14 @@ header nav ul#menu li a {
     color: white;
     text-decoration: none;
 }
+header nav ul#menu li a.ativo {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main section#forms{
+    padding: 2vw;
+}
 
 #carrossel img {
     width: 100%;
@@ -165,6 +173,11 @@ footer {
     right: 0px;
 }
 
+#about p {
+    text-align: left;
+}
+
+
 @media (min-width: 993px) {
     header nav button {
         display: none;
@@ -175,35 +188,35 @@ footer {
     }
     
     #carrossel div ul li {
-        height: 350px;
+        height: 300px;
     }
-    #carrossel .carrossel-button{
-        background-color: #fff;
-        border: 5px outset #ccc;
-        border-radius: 15px;
-        position: unset;
-        height: unset;
-        font-weight: bold;
-        font-size: 30px;
-        color: #fff;
-        text-shadow: 2px 2px 3px #000;
-    }
-
+    
     header nav .menu-aberto{
         display: flex!important;
+        visibility: unset!important;
+        opacity: 1;
     }
     header nav ul#menu {
         display: flex;
+        visibility: unset;
         position: unset;
         z-index: unset;
         background: unset;
         width: unset;
         padding: unset;
         right: unset;
+        opacity: 1;
     }
     header nav ul#menu li {
         margin: unset;
         border-bottom: unset;
         padding-left: 10px;
+    }
+
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 20px;
     }
 }

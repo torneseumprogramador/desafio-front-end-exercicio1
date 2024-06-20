@@ -40,20 +40,26 @@ function abrirMenu(button){
             }
         }, 30);
 
-        // setTimeout(()=>{
-        //     menu.classList.remove("menu-aberto");
-        //     menu.style.cssText = '';
-        //     clearInterval(transicao_opacidade_intervalo)
-        // }, 500)
-
         button.classList.remove("botao-aberto");
     }
 }
 
+function animacaoAncoras() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+
 window.addEventListener('load', function() {
-    ajustaImagens()
+    ajustaImagens();
+    animacaoAncoras();
 });
 
 window.addEventListener('resize', function() {
-    ajustaImagens()
+    ajustaImagens();
 });
