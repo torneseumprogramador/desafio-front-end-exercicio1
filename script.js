@@ -48,9 +48,15 @@ function animacaoAncoras() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            try{
+                let item = document.querySelector(this.getAttribute('href'));
+                if(item){
+                    item.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+            catch(e) { } 
         });
     });
 }
