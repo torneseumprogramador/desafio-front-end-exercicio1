@@ -1,5 +1,6 @@
 ```css
 ==== Proximos passos ===
+- js validação "inteligente"
 - js manipulando dom (como escrever em um html, como fazer animaçoes, como fazer validações form, como fazer mascaras, como fazer efeitos)
 - aprofundando em js, utilizando ajax
 - criar um html com js utilizando move, drop down
