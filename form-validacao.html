@@ -30,32 +30,30 @@
         <section id="forms">
             <fieldset>
                 <legend>Formulário com Validação</legend>
-                <!--form onsubmit="return validar_form1()" action=""-->
-                <!--form onsubmit="validar_form2(event)" action=""-->
                 <form action="">
                     <dl>
                         <dt>Validação para input Text</dt>
                         <dd>
                             <div>
                                 <label for="inputText">Input Text</label>
-                                <input type="text" name="inputText" id="inputText">
+                                <input validador="O campo input text não pode ser vazio" type="text" name="inputText" id="inputText">
                             </div>
                             <div>
                                 <label for="inputPassword">Input pass</label>
-                                <input type="password" name="inputPassword" id="inputPassword">
+                                <input validador="O campo input pass não pode ser vazio" type="password" name="inputPassword" id="inputPassword">
                             </div>
                         </dd>
                 
                         <dt>Campos com seleção</dt>
                         <dd>
-                            <div>
+                            <div validador="Selecione pelo menos uma opção do radio">
                                 <label for="inputRadio1">Radio1</label>
                                 <input type="radio" name="inputRadio" value="1" id="inputRadio1">
 
                                 <label for="inputRadio2">Radio2</label>
                                 <input type="radio" name="inputRadio" value="2" id="inputRadio2">
                             </div>
-                            <div>
+                            <div validador="Selecione pelo menos uma opção do checkbox">
                                 <label for="inputCheckbox1">Checkbox1</label>
                                 <input type="checkbox" class="jsValidar" name="inputCheckbox1" id="inputCheckbox1">
 
@@ -64,7 +62,7 @@
                             </div>
                             <div>
                                 <label for="select">Select</label>
-                                <select id="select" name="select">
+                                <select validador="O campo select não pode ser vazio" id="select" name="select">
                                     <option value="">[Selecione]</option>
             
                                     <optgroup label="São Paulo">
@@ -94,7 +92,7 @@
                             </div>
                             <div>
                                 <label for="selectMult">Select mult</label>
-                                <select id="selectMult" name="selectMult" multiple>
+                                <select id="selectMult" validador="O campo select mult não pode ser vazio" name="selectMult" multiple>
                                     <option value="1">Opção 1</option>
                                     <option value="2">Opção 2</option>
                                     <option value="3">Opção 3</option>
@@ -112,96 +110,7 @@
         <p>&copy; 2024 Desafio De Front-End</p>
     </footer>
     <script src="script.js"></script>
-    <script>
-        // const validar_form1 = () => {
-        //     const inputText = document.getElementById("inputText");
-        //     if(inputText.value == ""){
-        //         alert('O campo inputText não está preenchido');
-        //         inputText.focus();
-        //         return false;
-        //     }
-
-        //     return true;
-        // }
-
-        // const validar_form2 = (e) => {
-        //     e.preventDefault();
-        //     const inputText = document.getElementById("inputText");
-        //     if(inputText.value == ""){
-        //         alert('O campo inputText não está preenchido');
-        //         inputText.focus();
-        //         return;
-        //     }
-
-        //     e.target.submit();
-        // }
-
-        const form = document.querySelector("form");
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const inputText = document.getElementById("inputText");
-            if(inputText.value == ""){
-                alert('O campo inputText não está preenchido');
-                inputText.focus();
-                return;
-            }
-
-            const inputPassword = document.getElementById("inputPassword");
-            if(inputPassword.value == ""){
-                alert('O campo inputPassword não está preenchido');
-                inputPassword.focus();
-                return;
-            }
-
-            // const inputRadio1 = document.getElementById("inputRadio1");
-            // const inputRadio2 = document.getElementById("inputRadio2");
-            // if(!inputRadio1.checked && !inputRadio2.checked){
-            //     alert('O campo inputRadio não foi selecionado, escolha a opção 1 ou 2');
-            //     return;
-            // }
-
-            const inputRadioCheckeds = document.querySelectorAll("input[name=inputRadio]:checked")
-            if(inputRadioCheckeds.length == 0){
-                alert('O inputRadio não foi selecionado, escolha a opção 1 ou 2');
-                return;
-            }
-
-            const inputCheckboxCheckeds = document.querySelectorAll("input[type=checkbox].jsValidar:checked")
-            if(inputCheckboxCheckeds.length == 0){
-                alert('Selecione pelo menos uma opção no checkbox');
-                return;
-            }
-
-            const select = document.querySelector("#select")
-            if(select.value == ""){
-                alert('Selecione uma opção do select');
-                return;
-            }
-
-
-            // const selectMult = document.querySelector("#selectMult")
-            // const options = selectMult.options;
-            
-            // let selecteds = []
-            // for (option of options) {
-            //     if (option.selected) {
-            //         selecteds.push(option)
-            //     }
-            // }
-
-            // if(selecteds.length == 0){
-            //     alert('Selecione uma opção do selectMult');
-            //     return;
-            // }
-
-            const selectMultOptions = document.querySelectorAll("#selectMult option:checked")
-            if(selectMultOptions.length == 0){
-                alert('Selecione pelo menos uma opção no selectMult');
-                return;
-            }
-
-            e.target.submit();
-        });
-    </script>
+    <script src="validador.js"></script>
+    
 </body>
 </html>

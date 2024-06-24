@@ -177,6 +177,9 @@ footer {
     text-align: left;
 }
 
+.bordaVermelha{
+    background-color: rgb(245, 194, 194);
+}
 
 @media (min-width: 993px) {
     header nav button {
