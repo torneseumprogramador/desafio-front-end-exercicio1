@@ -20,6 +20,7 @@
                 <li><a href="forms.html" class="ativo">Forms</a></li>
                 <li><a href="form-validacao.html">Form Validação</a></li>
                 <li><a href="js.html">Javascript</a></li>
+                <li><a href="js-animacoes.html">Javascript Animaçoes</a></li>
                 <li><a href="index-en.html">Inglês</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#footer">Footer</a></li>
@@ -28,8 +29,15 @@
     </header>
     <main>
         <section id="forms">
+            <h1> Mascaras </h1>
+            <label for="nome">Mascara</label>
+            <input type="text" name="cep" id="cep" onkeyup="mascara(event)" format="99.999.999/9999-99" placeholder="Digite seu cep">
+            <hr>
+
             <h1> Forms </h1>
             <form action="receber-do-form.html" method="post" enctype="multipart/form-data" >
+               
+
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
                 <br>
@@ -119,5 +127,6 @@
         <p>&copy; 2024 Desafio De Front-End</p>
     </footer>
     <script src="script.js"></script>
+    <script src="mascaras.js"></script>
 </body>
 </html>

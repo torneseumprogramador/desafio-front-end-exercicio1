@@ -1,7 +1,6 @@
 ```css
 ==== Proximos passos ===
-- js validação "inteligente"
-- js manipulando dom (como fazer animaçoes, como fazer mascaras, select em cascata)
+- js manipulando dom (como fazer mascaras, select em cascata, tabela dinamica no js, modal com js)
 - criar um html com js utilizando move, drop down
 - jquery
 - performance (minidfy e o uglify)
