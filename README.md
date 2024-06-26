@@ -1,7 +1,7 @@
 ```css
 ==== Proximos passos ===
-- js manipulando dom (como fazer mascaras, select em cascata, tabela dinamica no js, modal com js)
-- criar um html com js utilizando move, drop down
+- js manipulando dom (select em cascata, tabela dinamica no js, modal com js)
+- criar um html com js utilizando move, drag drop
 - jquery
 - performance (minidfy e o uglify)
 - Babel, Webpack e TS
