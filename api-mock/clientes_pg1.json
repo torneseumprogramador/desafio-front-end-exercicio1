@@ -1,0 +1,14 @@
+{
+    "pagina_corrente": 1,
+    "total_de_paginas": 4,
+    "total_de_registros": 20,
+    "registros_por_pagina": 6,
+    "registros": [
+        { "id": 1, "nome": "Ana Silva", "telefone": "(11) 91234-5678", "endereco": "Rua das Flores, 123", "cidade": "São Paulo", "estado": "SP" },
+        { "id": 2, "nome": "Carlos Pereira", "telefone": "(21) 92345-6789", "endereco": "Avenida Brasil, 456", "cidade": "Rio de Janeiro", "estado": "RJ" },
+        { "id": 3, "nome": "Mariana Oliveira", "telefone": "(31) 93456-7890", "endereco": "Praça da Liberdade, 789", "cidade": "Belo Horizonte", "estado": "MG" },
+        { "id": 4, "nome": "João Souza", "telefone": "(41) 94567-8901", "endereco": "Rua XV de Novembro, 101", "cidade": "Curitiba", "estado": "PR" },
+        { "id": 5, "nome": "Beatriz Costa", "telefone": "(51) 95678-9012", "endereco": "Avenida Ipiranga, 112", "cidade": "Porto Alegre", "estado": "RS" },
+        { "id": 6, "nome": "Pedro Santos", "telefone": "(61) 96789-0123", "endereco": "Esplanada dos Ministérios, 131", "cidade": "Brasília", "estado": "DF" }
+    ]
+}

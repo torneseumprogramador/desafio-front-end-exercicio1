@@ -161,6 +161,100 @@
                 <input type="reset" value="Limpar [input]">
 
             </form>
+
+            <hr>
+            <style>
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: 20px 0;
+                    font-size: 18px;
+                    text-align: left;
+                }
+        
+                th, td {
+                    padding: 12px 15px;
+                }
+        
+                thead tr {
+                    background-color: #009879;
+                    color: #ffffff;
+                    text-align: left;
+                    font-weight: bold;
+                }
+        
+                tbody tr {
+                    border-bottom: 1px solid #dddddd;
+                }
+        
+                tbody tr:nth-of-type(even) {
+                    background-color: #f3f3f3;
+                }
+        
+                tbody tr:last-of-type {
+                    border-bottom: 2px solid #009879;
+                }
+        
+                tbody tr:hover {
+                    background-color: #f1f1f1;
+                    cursor: pointer;
+                }
+                .pagination {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px 0;
+                }
+        
+                .pagination a {
+                    color: #009879;
+                    float: left;
+                    padding: 8px 16px;
+                    text-decoration: none;
+                    transition: background-color .3s;
+                    border: 1px solid #009879;
+                    margin: 0 4px;
+                }
+        
+                .pagination a.active {
+                    background-color: #009879;
+                    color: white;
+                    border: 1px solid #009879;
+                }
+        
+                .pagination a:hover:not(.active) {
+                    background-color: #ddd;
+                }
+                
+                .pagination a.disabled {
+                    color: #cccccc;
+                    border: 1px solid #cccccc;
+                    cursor: not-allowed;
+                    pointer-events: none;
+                }
+            </style>
+
+            <h2>Tabela dinamica</h2>
+            <table id="tabela_dinamica">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Endereço</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6">Carregando ...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="pagination" class="pagination">
+            </div>
         </section>
     </main>
     <footer id="footer">
@@ -169,5 +263,6 @@
     <script src="script.js"></script>
     <script src="mascaras.js"></script>
     <script src="cascata.js"></script>
+    <script src="tabela_dinamica.js"></script>
 </body>
 </html>

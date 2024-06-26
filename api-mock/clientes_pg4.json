@@ -1,0 +1,10 @@
+{
+    "pagina_corrente": 4,
+    "total_de_paginas": 4,
+    "total_de_registros": 20,
+    "registros_por_pagina": 2,
+    "registros": [
+        { "id": 19, "nome": "Cláudia Gomes", "telefone": "(47) 99012-3456", "endereco": "Rua Visconde de Taunay, 1414", "cidade": "Joinville", "estado": "SC" },
+        { "id": 20, "nome": "Fábio Carvalho", "telefone": "(86) 90123-4567", "endereco": "Avenida Frei Serafim, 1515", "cidade": "Teresina", "estado": "PI" }
+    ]
+}

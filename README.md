@@ -1,6 +1,6 @@
 ```css
 ==== Proximos passos ===
-- js manipulando dom (select em cascata, tabela dinamica no js, modal com js)
+- js manipulando dom (modal com js)
 - criar um html com js utilizando move, drag drop
 - jquery
 - performance (minidfy e o uglify)

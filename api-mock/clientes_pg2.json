@@ -1,0 +1,14 @@
+{
+    "pagina_corrente": 2,
+    "total_de_paginas": 4,
+    "total_de_registros": 20,
+    "registros_por_pagina": 6,
+    "registros": [
+        { "id": 7, "nome": "Julia Almeida", "telefone": "(71) 97890-1234", "endereco": "Rua Chile, 202", "cidade": "Salvador", "estado": "BA" },
+        { "id": 8, "nome": "Roberto Lima", "telefone": "(81) 98901-2345", "endereco": "Avenida Boa Viagem, 303", "cidade": "Recife", "estado": "PE" },
+        { "id": 9, "nome": "Fernanda Rocha", "telefone": "(91) 99012-3456", "endereco": "Travessa Rui Barbosa, 404", "cidade": "Belém", "estado": "PA" },
+        { "id": 10, "nome": "Lucas Fernandes", "telefone": "(85) 90123-4567", "endereco": "Avenida Beira Mar, 505", "cidade": "Fortaleza", "estado": "CE" },
+        { "id": 11, "nome": "Renata Moreira", "telefone": "(62) 91234-5678", "endereco": "Rua 9, 606", "cidade": "Goiânia", "estado": "GO" },
+        { "id": 12, "nome": "Felipe Barbosa", "telefone": "(98) 92345-6789", "endereco": "Avenida Litorânea, 707", "cidade": "São Luís", "estado": "MA" }
+    ]
+}

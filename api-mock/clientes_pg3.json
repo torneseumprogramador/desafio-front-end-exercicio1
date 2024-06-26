@@ -1,0 +1,14 @@
+{
+    "pagina_corrente": 3,
+    "total_de_paginas": 4,
+    "total_de_registros": 20,
+    "registros_por_pagina": 6,
+    "registros": [
+        { "id": 13, "nome": "Larissa Martins", "telefone": "(67) 93456-7890", "endereco": "Rua 14 de Julho, 808", "cidade": "Campo Grande", "estado": "MS" },
+        { "id": 14, "nome": "André Castro", "telefone": "(48) 94567-8901", "endereco": "Rua Felipe Schmidt, 909", "cidade": "Florianópolis", "estado": "SC" },
+        { "id": 15, "nome": "Patrícia Ribeiro", "telefone": "(92) 95678-9012", "endereco": "Avenida Djalma Batista, 1010", "cidade": "Manaus", "estado": "AM" },
+        { "id": 16, "nome": "Ricardo Mendes", "telefone": "(69) 96789-0123", "endereco": "Rua da Feira, 1111", "cidade": "Porto Velho", "estado": "RO" },
+        { "id": 17, "nome": "Gisele Nunes", "telefone": "(63) 97890-1234", "endereco": "Avenida Juscelino Kubitschek, 1212", "cidade": "Palmas", "estado": "TO" },
+        { "id": 18, "nome": "Eduardo Araújo", "telefone": "(95) 98901-2345", "endereco": "Rua Bento Brasil, 1313", "cidade": "Boa Vista", "estado": "RR" }
+    ]
+}
