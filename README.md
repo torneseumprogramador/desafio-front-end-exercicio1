@@ -1,6 +1,6 @@
 ```css
 ==== Proximos passos ===
-- js manipulando dom (modal com js)
+- localstorage, session storage, cookie
 - criar um html com js utilizando move, drag drop
 - jquery
 - performance (minidfy e o uglify)
