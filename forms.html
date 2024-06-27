@@ -199,6 +199,18 @@
                     background-color: #f1f1f1;
                     cursor: pointer;
                 }
+                tbody tr td button {
+                    border: 1px solid #000;
+                    border-radius: 3px;
+                    padding: 5px;
+                }
+                tbody tr td button.alterar {
+                    background-color: yellow;
+                }
+                tbody tr td button.excluir {
+                    background-color: red;
+                    color: #fff;
+                }
                 .pagination {
                     display: flex;
                     justify-content: center;
@@ -235,6 +247,7 @@
             </style>
 
             <h2>Tabela dinamica</h2>
+            <button type="button" onclick="abrirModalTabelaDinamica()">Novo com modal</button>
             <table id="tabela_dinamica">
                 <thead>
                     <tr>
@@ -244,6 +257,8 @@
                         <th>Endereço</th>
                         <th>Cidade</th>
                         <th>Estado</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -260,9 +275,47 @@
     <footer id="footer">
         <p>&copy; 2024 Desafio De Front-End</p>
     </footer>
+
+    <div id="modal">
+        <div class="background"></div>
+        <div class="modal-main">
+            <div class="content">
+                <button type="button" class="fechar">X</button>
+                <h1>Novo Cliente</h1>
+
+                <form>
+                    <input type="hidden" id="id" name="id" value="0">
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+                    <div>
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco" required>
+                    </div>
+                    <div>
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+                    <div>
+                        <label for="estado">Estado:</label>
+                        <input type="text" id="estado" name="estado" required>
+                    </div>
+                    <div>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
     <script src="mascaras.js"></script>
     <script src="cascata.js"></script>
     <script src="tabela_dinamica.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>
