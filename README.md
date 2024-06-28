@@ -1,7 +1,5 @@
 ```css
 ==== Proximos passos ===
-- localstorage, session storage, cookie
-- criar um html com js utilizando move, drag drop
 - jquery
 - performance (minidfy e o uglify)
 - Babel, Webpack e TS
