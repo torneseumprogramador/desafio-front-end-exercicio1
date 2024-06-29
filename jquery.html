@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.ico" type="image/png">
+    <title>Desafio De Front-End</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script-->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery.mask.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo.webp" width="50px" alt="Logo">
+        </div>
+        <h1>Delicious Burger</h1>
+        <nav>
+            <button onclick="abrirMenu(this)"></button>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="jquery.html" class="ativo">JQuery</a></li>
+                <li><a href="form-validacao.html">Form Validação</a></li>
+                <li><a href="js.html">Javascript</a></li>
+                <li><a href="js-animacoes.html">Javascript Animaçoes</a></li>
+                <li><a href="index-en.html">Inglês</a></li>
+                <li><a href="drag-drop.html">drag-drop</a></li>
+                <li><a href="localstorage.html">localstorage</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#footer">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="padding: 50px;">
+        <h1>Jquery</h1>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>
+                Item 3
+                <button>Ok</button>
+            </li>
+            <li>Item 4</li>
+            <li>
+                Item 5
+                <button>Ok</button>
+            </li>
+            <li>Item 6</li>
+        </ul>
+
+        <input type="text" id="inputComMask">
+
+
+        <div id="ex1" class="modal">
+            <p>Thanks for clicking. That felt good.</p>
+            <a href="#" rel="modal:close">Close</a>
+        </div>
+        
+        <!-- Link to open the modal -->
+        <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+        
+    </main>
+
+    <script>
+        /*
+        $("main ul li").addClass("teste")
+        $("main ul li").removeClass("teste")
+        $("main").hasClass("teste")
+        */
+
+        $("main ul li button").on("click", e => {
+            let obj = $(e.target);
+            let valor = obj.attr("clickei")
+            if(valor == "true"){
+                obj.attr("clickei", "false");
+            }
+            else obj.attr("clickei", "true");
+            
+        })
+
+        $('#inputComMask').mask("00/00/0000", {placeholder: "__/__/____"});
+
+        /*
+        window.addEventListener('load', function() {
+            alert('carregou pelo js vanilla');
+        });
+
+        $(document).ready( () => {
+            alert('carregou pelo jquery');
+        });
+
+        $(() => {
+            alert('carregou pelo jquery reduzida');
+        });
+        */
+
+    </script>
+    <footer id="footer">
+        <p>&copy; 2024 Desafio De Front-End</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
