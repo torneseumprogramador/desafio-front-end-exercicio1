@@ -1,6 +1,5 @@
 ```css
 ==== Proximos passos ===
-- jquery
 - performance (minidfy e o uglify)
 - Babel, Webpack e TS
 - saas less
