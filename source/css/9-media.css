@@ -1,0 +1,42 @@
+@media (min-width: 993px) {
+    header nav button {
+        display: none;
+    }
+
+    header nav ul {
+        display: flex;
+    }
+    
+    #carrossel div ul li {
+        height: 300px;
+    }
+    
+    header nav .menu-aberto{
+        display: flex!important;
+        visibility: unset!important;
+        opacity: 1;
+    }
+    header nav ul#menu {
+        display: flex;
+        visibility: unset;
+        position: unset;
+        z-index: unset;
+        background: unset;
+        width: unset;
+        padding: unset;
+        right: unset;
+        opacity: 1;
+    }
+    header nav ul#menu li {
+        margin: unset;
+        border-bottom: unset;
+        padding-left: 10px;
+    }
+
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 20px;
+    }
+}
