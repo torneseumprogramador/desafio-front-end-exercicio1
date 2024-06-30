@@ -108,48 +108,50 @@ window.addEventListener('load', function() {
 });
 
 const form = document.querySelector("form");
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const listaCampos = document.querySelectorAll("*[validador]");
-    for(campo of listaCampos){
-        campo.classList.remove("bordaVermelha");
-        let validado = true;
-        
-        switch(campo.tagName){
-            case "INPUT":
-            case "SELECT":
-                if(campo.value == ""){
-                    validado = false;
-                    let mensagem = campo.getAttribute("validador");
-                    campo.classList.add("bordaVermelha");
-                    alert(mensagem);
-                    campo.focus();
-                }
-                break;
-            case "DIV":
-                let inputs = campo.querySelectorAll("input");
-                let checked = true;
-                for(input of inputs){
-                    if(input.checked){
-                        checked = true;
-                        break;
+if(form){
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const listaCampos = document.querySelectorAll("*[validador]");
+        for(campo of listaCampos){
+            campo.classList.remove("bordaVermelha");
+            let validado = true;
+            
+            switch(campo.tagName){
+                case "INPUT":
+                case "SELECT":
+                    if(campo.value == ""){
+                        validado = false;
+                        let mensagem = campo.getAttribute("validador");
+                        campo.classList.add("bordaVermelha");
+                        alert(mensagem);
+                        campo.focus();
                     }
-                    else{
-                        checked = false;
+                    break;
+                case "DIV":
+                    let inputs = campo.querySelectorAll("input");
+                    let checked = true;
+                    for(input of inputs){
+                        if(input.checked){
+                            checked = true;
+                            break;
+                        }
+                        else{
+                            checked = false;
+                        }
                     }
-                }
 
-                if (!checked){
-                    campo.classList.add("bordaVermelha");
-                    let mensagem = campo.getAttribute("validador");
-                    alert(mensagem);
-                    validado = false;
-                }
-                break;
+                    if (!checked){
+                        campo.classList.add("bordaVermelha");
+                        let mensagem = campo.getAttribute("validador");
+                        alert(mensagem);
+                        validado = false;
+                    }
+                    break;
+            }
+
+            if(!validado) return;
         }
 
-        if(!validado) return;
-    }
-
-    e.target.submit();
-});
+        e.target.submit();
+    });
+}

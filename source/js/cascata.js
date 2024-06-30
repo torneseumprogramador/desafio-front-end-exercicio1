@@ -1,7 +1,10 @@
 window.addEventListener('load', function() {
-    document.getElementById("estados").addEventListener('change', function() {
-        carregarCidades(this.value);
-    });
+    const estados = document.getElementById("estados");
+    if(estados){
+        estados.addEventListener('change', function() {
+            carregarCidades(this.value);
+        });
+    }
 });
 
 const carregarCidades = async (estado) => {

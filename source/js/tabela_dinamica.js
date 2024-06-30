@@ -146,6 +146,9 @@ const excluirDados = async elen => {
     }
 }
 const carregarClientes = async (pagina) => {
+    const tbody = document.querySelector("table#tabela_dinamica tbody");
+    if(!tbody) return;
+    
     const url = `api-mock/clientes_pg${pagina}.json`;
 
     try {
@@ -156,7 +159,6 @@ const carregarClientes = async (pagina) => {
         }
 
         const resultadoApi = await response.json();
-        const tbody = document.querySelector("table#tabela_dinamica tbody");
         tbody.innerHTML = "";
         if(resultadoApi.registros.length === 0) {
             tbody.innerHTML = `
