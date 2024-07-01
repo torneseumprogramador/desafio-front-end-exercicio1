@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.ico" type="image/png">
+    <title>Desafio De Front-End</title>
+    <link rel="stylesheet" href="styles.min.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo.webp" width="50px" alt="Logo">
+        </div>
+        <h1>Delicious Burger</h1>
+        <nav>
+            <button onclick="abrirMenu(this)"></button>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="jquery.html">JQuery</a></li>
+                <li><a href="form-validacao.html">Form Validação</a></li>
+                <li><a href="js.html">Javascript</a></li>
+                <li><a href="js-animacoes.html">Javascript Animaçoes</a></li>
+                <li><a href="index-en.html">Inglês</a></li>
+                <li><a href="drag-drop.html" class="ativo">drag-drop</a></li>
+                <li><a href="localstorage.html">localstorage</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#footer">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="height: 50vh;padding: 50px;">
+        <style>
+            .box{
+                width: 300px;
+                height: 100px;
+                border: 1px solid #ccc;
+                background-color: #fff;
+            }
+            .box .titulo{
+                background-color: #cfcfcf;
+                padding: 5px;
+                text-align: center;
+                cursor: move;
+            }
+            .box h1{
+                text-align: center;
+            }
+        </style>
+        <div class="box">
+            <div class="titulo">Clique e arraste aqui</div>
+            <h1>Drag Drop</h1>
+        </div>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 Desafio De Front-End</p>
+    </footer>
+    <script src="scripts.min.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            document.querySelector(".box").addEventListener("mousedown", e => {
+                const box = document.querySelector(".box");
+                box.style.position = 'absolute';
+                box.setAttribute("move", "true");
+            });
+
+            document.querySelector(".box").addEventListener("mouseup", e => {
+                const box = document.querySelector(".box");
+                box.removeAttribute("move");
+            });
+
+            document.addEventListener('mousemove', function(event) {
+                const box = document.querySelector(".box");
+                if(box.getAttribute("move")){
+                    box.style.top = event.clientY + 'px';
+                    box.style.left = event.clientX + 'px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
