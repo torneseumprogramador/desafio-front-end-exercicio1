@@ -1,0 +1,77 @@
+@function calculate-rem($size) {
+    $rem-size: calc($size / 16px);
+    @return #{$rem-size}rem;
+}
+  
+body {
+    font-size: calculate-rem(16px);
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { 
+  @include border-radius(10px); 
+}
+
+
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+
+$theme: light;
+@import 'partials/condicional';
+
+$theme: dark;
+@import 'partials/condicional';
+
+$themes: dark, light, default;
+@each $theme in $themes {
+  .#{$theme}-theme {
+    @if $theme == dark {
+      background-color: #333;
+      color: #fff;
+    } @else if $theme == light {
+      background-color: #fff;
+      color: #333;
+    } @else {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+      width: calc(100% / 3) * $i;
+    }
+}
+  
+
+
+@import 'partials/body';
+@import 'partials/carrossel';
+@import 'partials/modal';
+@import 'partials/styles';
+@import 'partials/media';

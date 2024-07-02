@@ -1,0 +1,110 @@
+@primary-color: #333;
+@font-stack: Helvetica, sans-serif;
+
+body {
+  color: @primary-color;
+  font: 100% @font-stack;
+}
+
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.box {
+  .border-radius(5px);
+}
+
+
+.message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.message:extend(.message-shared) {
+  color:#333
+}
+
+.success:extend(.message-shared) {
+  border-color: green;
+}
+
+.error:extend(.message-shared) {
+  border-color: red;
+}
+
+
+
+
+
+@theme: dark;
+@import 'partials/condicional';
+
+@theme: light; /* sobrescreve o de cima com dark */
+@import 'partials/condicional';
+
+
+
+
+
+@themes: dark, light, default;
+
+.theme-styles(@theme) when (@theme = dark) {
+  background-color: #333;
+  color: #fff;
+}
+
+.theme-styles(@theme) when (@theme = light) {
+  background-color: #fff;
+  color: #333;
+}
+
+.theme-styles(@theme) when (@theme = default) {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.each(@themes, @index) when (@index < length(@themes)) {
+  @theme: extract(@themes, @index + 1);
+  .@{theme}-theme {
+    .theme-styles(@theme);
+  }
+  .each(@themes, @index + 1);
+}
+
+.each(@themes, 0);
+
+
+
+.generate-columns(@i) when (@i <= 12) {
+  .col-@{i} {
+    width: calc(100% / 3 * @i);
+  }
+  .generate-columns(@i + 1);
+}
+
+.generate-columns(1);
+
+
+
+
+
+@base: 5%;
+@filler: @base * 2;
+@other: @base + @filler;
+
+#header {
+  width: @other + @filler;
+  color: lighten(@primary-color, 20%);
+}
+
+
+
+@import 'partials/body';
+@import 'partials/carrossel';
+@import 'partials/modal';
+@import 'partials/styles';
+@import 'partials/media';

@@ -1,0 +1,22 @@
+{
+  "name": "3-sass-less",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-sass": "sass sass/style.scss sass/style.css",
+    "build-sass-compressed": "sass sass/style.scss sass/style.css --style=compressed",
+    "build-less": "lessc less/style.less less/style.css --source-map",
+    "build-less-compressed": "lessc less/style.less less/style.css --source-map --clean-css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "less": "^4.2.0",
+    "less-plugin-clean-css": "^1.5.1",
+    "sass": "^1.77.6"
+  }
+}

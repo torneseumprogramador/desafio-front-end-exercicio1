@@ -1,0 +1,21 @@
+
+.condicional-dark() when (@theme = dark) {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .condicional-light() when (@theme = light) {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .condicional-default() when not (@theme = dark) and not (@theme = light) {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .condicional {
+    .condicional-dark();
+    .condicional-light();
+    .condicional-default();
+  }

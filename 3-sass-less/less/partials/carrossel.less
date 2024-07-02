@@ -1,0 +1,44 @@
+#carrossel {
+    display: flex;
+    position: relative;
+
+    .carrossel-container {
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+    div {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            li {
+                width: 992px;
+                height: 150px;
+            }
+        }
+    }
+
+    .carrossel-button {
+        background-color: transparent;
+        border: 0;
+        position: absolute;
+        height: 100%;
+        font-weight: bold;
+        font-size: 30px;
+        color: #fff;
+        text-shadow: 2px 2px 3px #000;
+
+        &#carrossel-anterior {
+            left: 0;
+        }
+
+        &#carrossel-proximo {
+            right: 0;
+        }
+    }
+}
